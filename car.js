@@ -9,6 +9,7 @@ class Car{
         this.acceleration = 0.2;
         this.maxSpeed = 3;
         this.friction = 0.05;
+        this.angle = 0;
 
         this.controls = new Controls();
     }
