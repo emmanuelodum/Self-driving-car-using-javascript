@@ -7,4 +7,11 @@ class Sensor{
 
         this.rays = [];
     }
+
+    update() {
+        this.rays = [];
+        for (let i = 0; i < this.raysCount; i++){
+            
+        }
+    }
 }
