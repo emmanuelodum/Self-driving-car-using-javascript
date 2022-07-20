@@ -11,7 +11,11 @@ class Sensor{
     update() {
         this.rays = [];
         for (let i = 0; i < this.raysCount; i++){
-            
+            const rayAngle = lerp(
+                this.raySpread / 2,
+                -this.raySpread / 2,
+                i / (this.rayCount - 1)
+            );
         }
     }
 }
