@@ -16,6 +16,15 @@ class Sensor{
                 -this.raySpread / 2,
                 i / (this.rayCount - 1)
             );
+
+            const start = { x: this.car.x, y: this.car.y };
+            const end = {
+                x: this.car.x -
+                    Math.sin(rayAngle) * this.rayLenght,
+                y: this.car.y -
+                    Math.cos(rayAngle) * this.rayLenght
+            };
+            this.rays.push([start, end]);
         }
     }
 }
