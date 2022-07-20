@@ -1,3 +1,5 @@
+const { Drawer } = require("@material-ui/core");
+
 class Sensor{
     constructor(car) {
         this.car = car;
@@ -25,6 +27,20 @@ class Sensor{
                     Math.cos(rayAngle) * this.rayLenght
             };
             this.rays.push([start, end]);
+        }
+
+        draw(ctx){
+            for (let i = 0; i < this.rayCount; i++){
+                ctx.beginPath();
+                ctx.lineWidth = 2;
+                ctx.strokeStyle = "yellow";
+                ctx.moveTo(
+                    this.rays[i][0].x,
+                    this.rays[i][0].y
+                );
+
+                
+            }
         }
     }
 }
