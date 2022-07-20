@@ -29,7 +29,8 @@ class Sensor{
             this.rays.push([start, end]);
         }
 
-        draw(ctx){
+        draw(ctx)
+                 {
             for (let i = 0; i < this.rayCount; i++){
                 ctx.beginPath();
                 ctx.lineWidth = 2;
@@ -43,7 +44,7 @@ class Sensor{
                     this.rays[i][1].y
                 );
                 
-                
+                ctx.stroke();
             }
         }
     }
